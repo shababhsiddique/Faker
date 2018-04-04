@@ -1,12 +1,13 @@
 {
-    "name": "fzaninotto/faker",
+    "name": "shababhsiddique/faker",
     "type": "library",
     "description": "Faker is a PHP library that generates fake data for you.",
     "keywords": ["faker", "fixtures", "data"],
     "license": "MIT",
     "authors": [
         {
-            "name": "François Zaninotto"
+            "name": "François Zaninotto",
+            "name": "Shabab Haider Siddique"
         }
     ],
     "require": {
