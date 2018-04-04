@@ -45,8 +45,28 @@ Faker requires PHP >= 5.3.3.
 
 ## Installation
 
+in your composer.json file
+
+Add Custom Repository, 
 ```sh
-composer require fzaninotto/faker
+"repositories": [
+        ....
+        {
+            "type": "vcs",
+            "url": "https://github.com/shababhsiddique/faker"
+        }
+	.....
+    ],
+```
+and replace faker package (fzaninotto/faker) with (shababhsiddique/faker) in require-dev right under mockery
+```sh
+
+"require-dev": {        
+        ....
+        "shababhsiddique/faker": "~1.8-dev",
+        .....
+    },
+
 ```
 
 ## Basic Usage
