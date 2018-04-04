@@ -250,7 +250,22 @@ Methods accepting a `$timezone` argument default to `date_default_timezone_get()
     rgbCssColor            // 'rgb(0,255,122)'
     safeColorName          // 'fuchsia'
     colorName              // 'Gainsbor'
+    
+### `Faker\Provider\Product`
 
+    simpleProduct          // 'Chromium Pants, Magenta Mouse'
+    fancyProduct           // 'Medium Sand Blasted Purse'
+    complexProduct         // 'Fabulously Clever Low Carbon Toaster'
+    elaborateProduct       // 'Elegant Wide Really Sparkling Amoled Monitor'
+    adjective              // 'Elegant'
+    adverb                 // 'Really'
+    size                   // 'Large'
+    shape                  // 'Square'
+    material               // 'Wooden'
+    product                // 'Mouse'
+    price($min = 1, $max = 9999, $real = false)// '100.00'
+    industry               // 'Electronics'
+    
 ### `Faker\Provider\File`
 
     fileExtension          // 'avi'
