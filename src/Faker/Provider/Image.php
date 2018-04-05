@@ -28,6 +28,20 @@ class Image extends Base
      *
      * @return string
      */
+    public static function imageOffline($fileNumber=0){
+
+        if($fileNumber == 0){
+            $fileNumber = mt_rand(1,10);
+        }
+
+        $filename = uniqid();
+
+        return $tempPath = realpath("/images/$fileNumber.jpeg");               
+
+    }
+
+
+
     public static function imageUrl($width = 640, $height = 480, $category = null, $randomize = true, $word = null, $gray = false)
     {
         $baseUrl = "https://lorempixel.com/";
