@@ -13,18 +13,14 @@ class Image extends Base
     );
 
     /**
-     * Generate the URL that will return a random image
+     * Generate a path from the image pool use base_path() on it
      *
-     * Set randomize to false to remove the random GET parameter at the end of the url.
+     * Pass number between 1 to 10 to get a speficic image
+	 * To increase the size of image pool drop more in the vendor/shababhsiddie/faker/images folder and pass mt_rand(1,number of images)
      *
-     * @example 'http://lorempixel.com/640/480/?12345'
+     * @example 'vendor/shababhsiddique/faker/images/$fileNumber.jpeg'
      *
-     * @param integer $width
-     * @param integer $height
-     * @param string|null $category
-     * @param bool $randomize
-     * @param string|null $word
-     * @param bool $gray
+     * @param integer $fileNumber
      *
      * @return string
      */
@@ -34,9 +30,8 @@ class Image extends Base
             $fileNumber = mt_rand(1,10);
         }
 
-        $filename = uniqid();
-
-        return $tempPath = realpath("/images/$fileNumber.jpeg");               
+        $tempPath = "vendor/shababhsiddique/faker/images/$fileNumber.jpeg";
+        return $tempPath;
 
     }
 

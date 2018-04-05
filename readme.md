@@ -309,6 +309,7 @@ Methods accepting a `$timezone` argument default to `date_default_timezone_get()
     image($dir, $width, $height, 'cats', false) // '13b73edae8443990be1aa8f1a483bc27.jpg' it's a filename without path
     image($dir, $width, $height, 'cats', true, false) // it's a no randomize images (default: `true`)
     image($dir, $width, $height, 'cats', true, true, 'Faker') // 'tmp/13b73edae8443990be1aa8f1a483bc27.jpg' it's a cat with 'Faker' text. Default, `null`.
+    imageOffline($fileNumber = 0) // '/vendor/shababhsiddique/faker/images/7.jpeg'
 
 ### `Faker\Provider\Uuid`
 
