@@ -177,7 +177,7 @@ namespace Faker;
  *
  * @method string imageUrl($width = 640, $height = 480, $category = null, $randomize = true, $word = null, $gray = false)
  * @method string image($dir = null, $width = 640, $height = 480, $category = null, $fullPath = true, $randomize = true, $word = null)
- * @method string imageOffline($fileNumber = 0)
+ * @method string imageOffline($fileNumber = 0, $thumbnail = false)
  *
  * @property string $hexColor
  * @property string $safeHexColor

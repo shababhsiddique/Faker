@@ -66,12 +66,21 @@ and replace faker package (fzaninotto/faker) with (shababhsiddique/faker) in req
 
 "require-dev": {        
         ....
-        "shababhsiddique/faker": "~1.8-dev",
+        "shababhsiddique/faker": "~1.8.*",
         .....
     },
 
 ```
+to get the latest development version of this vendor
+```sh
 
+"require-dev": {        
+        ....
+        "shababhsiddique/faker": "dev-master",
+        .....
+    },
+
+```
 ## Basic Usage
 
 Use `Faker\Factory::create()` to create and initialize a faker generator, which can generate data by accessing properties named after the type of data you want.
@@ -309,7 +318,7 @@ Methods accepting a `$timezone` argument default to `date_default_timezone_get()
     image($dir, $width, $height, 'cats', false) // '13b73edae8443990be1aa8f1a483bc27.jpg' it's a filename without path
     image($dir, $width, $height, 'cats', true, false) // it's a no randomize images (default: `true`)
     image($dir, $width, $height, 'cats', true, true, 'Faker') // 'tmp/13b73edae8443990be1aa8f1a483bc27.jpg' it's a cat with 'Faker' text. Default, `null`.
-    imageOffline($fileNumber = 0) // '/vendor/shababhsiddique/faker/images/7.jpeg'
+    imageOffline($fileNumber = 0,$thumbnail = false) // '/vendor/shababhsiddique/faker/images/7.jpeg'
 
 ### `Faker\Provider\Uuid`
 

@@ -18,19 +18,26 @@ class Image extends Base
      * Pass number between 1 to 10 to get a speficic image
 	 * To increase the size of image pool drop more in the vendor/shababhsiddie/faker/images folder and pass mt_rand(1,number of images)
      *
+     * If second parameter true, the image will be a thumbnail
+     *
      * @example 'vendor/shababhsiddique/faker/images/$fileNumber.jpeg'
      *
      * @param integer $fileNumber
-     *
+     * @param boolean $thumbnail
      * @return string
      */
-    public static function imageOffline($fileNumber=0){
+    public static function imageOffline($fileNumber=0,$thumbnail = false){
 
         if($fileNumber == 0){
             $fileNumber = mt_rand(1,10);
         }
 
-        $tempPath = "vendor/shababhsiddique/faker/images/$fileNumber.jpeg";
+        if($thumbnail){
+            $tempPath = "vendor/shababhsiddique/faker/images/thumb/$fileNumber.jpeg";
+        }else{
+            $tempPath = "vendor/shababhsiddique/faker/images/$fileNumber.jpeg";
+        }
+        
         return $tempPath;
 
     }
